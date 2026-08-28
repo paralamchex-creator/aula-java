@@ -1,7 +1,10 @@
+package conteudo;
+
 public class LogicaBasica {
+
     public static void main(String[] args) {
-        int nota=75;
         //if else
+        int nota=75;
         if (nota==100) {
             System.out.println("aprovado");
         } else if (nota > 70){

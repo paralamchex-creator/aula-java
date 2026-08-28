@@ -4,7 +4,8 @@ out/
 !**/src/test/**/out/
 .kotlin
 .idea/
-checkstyle-idea.xml
+*.iml
+*.xml
 
 ### Eclipse ###
 .apt_generated
