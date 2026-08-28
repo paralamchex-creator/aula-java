@@ -3,6 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+.idea/
+checkstyle-idea.xml
 
 ### Eclipse ###
 .apt_generated
