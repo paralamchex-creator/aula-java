@@ -43,3 +43,5 @@ java -cp out <NomeDaClasse>
 ## Objetivo
 
 Este projeto é uma base inicial de estudo para consolidar os primeiros conceitos da linguagem Java e evoluir gradualmente para tópicos mais avançados.
+
+> email: luisgarcia173@gmail.com
