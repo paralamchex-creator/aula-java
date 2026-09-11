@@ -47,23 +47,49 @@ public class Aula03Logica {
     private static void classificarFaixaEtaria(int idade) {
         // TODO: Implementar a lógica para classificar a idade em: criança, adolescente ou adulto e imprimir o resultado no console.
         // Exemplo Saída: "Com 14 anos, a pessoa é adolescente."
+        if (idade <= 12) {
+            System.out.println("criança");
+
+        } else if (idade <= 18) {
+            System.out.println("adolescente");
+
+        } else {
+            System.out.println("adulto");
+        }
     }
 
     private static void classificarNota(double nota) {
         // TODO: Implementar a lógica para classificar a nota do aluno (aprovado, recuperação ou reprovado) e imprimir o resultado.
         // Exemplo Saída: "Nota 7.5: aprovado."
+        if (nota <= 3.0) {
+            System.out.println("reprovado");
+        } else if (nota <= 7.0) {
+            System.out.println("recuperaçao");
+
+        } else {
+            System.out.println("aprovado");
+        }
     }
 
     private static void inverterTexto(String texto) {
         // TODO: Implementar a lógica para inverter o texto e imprimir o resultado no console.
         // Exemplo Saída: "Texto invertido: avaJ."
+        String invertido = new StringBuilder(texto).reverse().toString();
+        System.out.println(invertido);
     }
 
     private static void contarMaiusculas(String texto) {
         // TODO: Implementar a lógica para contar quantas letras maiúsculas existem no texto e imprimir o resultado.
         // Exemplo Saída: "O texto possui 4 letras maiúsculas."
-    }
+        int contarMaiusculas = 0;
 
+        for (int i = 0; i < texto.length(); i++) {
+            char caracter = texto.charAt(i);
+            if (Character.isUpperCase(caracter)) {
+                contarMaiusculas++;
+            }
+        }
+        System.out.println("o texto tem " + contarMaiusculas + " maiusculas ");}
     private static void somarElementosArray(int[] numeros) {
         // TODO: Implementar a lógica para somar os elementos do array e imprimir o resultado no console.
         // Exemplo Saída: "A soma dos elementos é 20."
