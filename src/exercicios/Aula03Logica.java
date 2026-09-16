@@ -67,7 +67,7 @@ public class Aula03Logica {
             System.out.println("recuperaçao");
 
         } else {
-            System.out.println("aprovado");
+            System.out.println("nota " + nota + ":" + " aprovado ");
         }
     }
 
@@ -89,31 +89,69 @@ public class Aula03Logica {
                 contarMaiusculas++;
             }
         }
-        System.out.println("o texto tem " + contarMaiusculas + " maiusculas ");}
+        System.out.println("o texto tem " + contarMaiusculas + " maiusculas ");
+    }
+
     private static void somarElementosArray(int[] numeros) {
         // TODO: Implementar a lógica para somar os elementos do array e imprimir o resultado no console.
         // Exemplo Saída: "A soma dos elementos é 20."
+        numeros = new int[]{2, 4, 6, 8};
+        int soma = 0;
+        for (int numero : numeros) {
+            soma = soma + numero;
+            System.out.println("a soma dos elementos é " + soma);
+        }
     }
 
     private static void encontrarMenorValor(int[] numeros) {
         // TODO: Implementar a lógica para encontrar o menor valor do array e imprimir o resultado no console.
         // Exemplo Saída: "O menor valor é 1."
+        int menor = 0;
+        int[] meusnumeros = {9, 3, 7, 1, 5};
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+                System.out.println("o menor valor é: " + menor + " :D");
+            }
+        }
     }
 
     private static void contarNomesLongos(String[] nomes) {
         // TODO: Implementar a lógica para contar quantos nomes têm mais de 5 letras e imprimir o resultado no console.
         // Exemplo Saída: "Quantidade de nomes longos: 2."
+        int contador = 0;
+        for (int i = 0; i < nomes.length; i++) {
+            if (nomes[i].length() > 5) {
+                contador++;
+            }
+        }
+        System.out.println("nomes longos: " + contador);
     }
 
     private static void calcularMediaPrecos(double[] precos) {
         // TODO: Implementar a lógica para calcular a média dos preços e imprimir o resultado no console.
         // Exemplo Saída: "A média dos preços é 21.83."
+        int soma = 0;
+        for (int i = 0; i < precos.length; i++) {
+            soma += precos[i];
+        }
+        double media = (double) soma / precos.length;
+
+        System.out.println("a media dos precos é: " + media);
     }
 
     private static void verificarEstacaoDoAno(int mes) {
         // TODO: Implementar a lógica com switch/case para identificar a estação do ano com base no mês e imprimir no console.
         // Exemplo Saída: "Mês 7: inverno."
-    }
+        switch (mes) {
+            case 12, 1, 2 -> System.out.println( "mes" + mes + "é verao");
+            case 3, 4, 5 -> System.out.println( "mes" + mes + "é primavera");
+            case 6, 7, 8 -> System.out.println( "mes " + mes + " é inverno");
+            case 9, 10, 11 -> System.out.println( "mes" + mes + "é outono");
+            default -> System.out.println( "invalido");
+        }
+ }
+
 
     private static void compararNumerosEDiferenca(int numero1, int numero2) {
         // TODO: Implementar a lógica para verificar qual número é maior e imprimir também a diferença entre eles.
