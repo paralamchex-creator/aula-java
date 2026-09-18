@@ -41,7 +41,7 @@ public class Aula03Logica {
         verificarEstacaoDoAno(7);
 
         // 10) Comparar dois números e mostrar diferença (if/else)
-        compararNumerosEDiferenca(18, 11);
+        compararNumerosEDiferenca(11, 18);
     }
 
     private static void classificarFaixaEtaria(int idade) {
@@ -99,14 +99,13 @@ public class Aula03Logica {
         int soma = 0;
         for (int numero : numeros) {
             soma = soma + numero;
-            System.out.println("a soma dos elementos é " + soma);
-        }
+        }  System.out.println("a soma dos elementos é " + soma);
     }
 
     private static void encontrarMenorValor(int[] numeros) {
         // TODO: Implementar a lógica para encontrar o menor valor do array e imprimir o resultado no console.
         // Exemplo Saída: "O menor valor é 1."
-        int menor = 0;
+        int menor = 999;
         int[] meusnumeros = {9, 3, 7, 1, 5};
         for (int i = 1; i < numeros.length; i++) {
             if (numeros[i] < menor) {
@@ -144,17 +143,29 @@ public class Aula03Logica {
         // TODO: Implementar a lógica com switch/case para identificar a estação do ano com base no mês e imprimir no console.
         // Exemplo Saída: "Mês 7: inverno."
         switch (mes) {
-            case 12, 1, 2 -> System.out.println( "mes" + mes + "é verao");
-            case 3, 4, 5 -> System.out.println( "mes" + mes + "é primavera");
-            case 6, 7, 8 -> System.out.println( "mes " + mes + " é inverno");
-            case 9, 10, 11 -> System.out.println( "mes" + mes + "é outono");
-            default -> System.out.println( "invalido");
+            case 12, 1, 2 -> System.out.println("mes" + mes + "é verao");
+            case 3, 4, 5 -> System.out.println("mes" + mes + "é primavera");
+            case 6, 7, 8 -> System.out.println("mes " + mes + " é inverno");
+            case 9, 10, 11 -> System.out.println("mes" + mes + "é outono");
+            default -> System.out.println("invalido");
         }
- }
+    }
 
 
     private static void compararNumerosEDiferenca(int numero1, int numero2) {
         // TODO: Implementar a lógica para verificar qual número é maior e imprimir também a diferença entre eles.
-        // Exemplo Saída: "O maior número é 18 e a diferença é 7."
+        // Exemplo Saída: "O maior número é 18 e a diferença é 7."numero1 = 18;
+        int diferença = 0;
+        if (numero1 > numero2) {
+            diferença = numero1 - numero2;
+            System.out.println("o maior numero é "+numero1+" e a diferença é " + diferença);
+        } else if (numero2 > numero1) {
+            diferença = numero2 - numero1;
+            System.out.println(numero2+" é maior e a diferença é " + diferença);
+
+        } else {
+            System.out.println("os numeros sao iguais");
+
+        }
     }
 }
