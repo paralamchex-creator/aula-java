@@ -7,7 +7,7 @@ public class CollectionBasico {
 
     public static void main(String[] args) {
       //testarList();
-       // testarMap();
+       //testarMap();
         testarSet();
     }
 
@@ -34,8 +34,28 @@ public class CollectionBasico {
                 );
 
         // ESTUDAR LINKEDHASHMAP
+        List <String> doces = List.of("pudim", "doce de abobora", "bolo");
+        List <String> salgados = List.of("coxinha", "empada", "batata com bacon");
+        Map <String, List<String>> comidas = new LinkedHashMap<>();
+
+        comidas.put("doces", doces);
+        comidas.put("salgados", salgados);
+        comidas.forEach((chave,valor)->
+                System.out.println(chave+"-" +valor)
+        );
+
+
 
         // ESTUDAR TREEMAP
+        Map <String, String> pessoas = new TreeMap<>();
+        pessoas.put("garro", "12345");
+        pessoas.put("memphis", "12345");
+        pessoas.put("neneca", "12345");
+        pessoas.put("yuri", "12345");
+        pessoas.put("alberto", "12345");
+        pessoas.forEach((chave,valor)->
+                System.out.println(chave+"-" +valor)
+        );
 
 
     }
@@ -49,6 +69,22 @@ public class CollectionBasico {
         // ESTUDAR LINKEDHASHSET
 
         //ESTUDAR TREESET
+        Set<String> paises = new LinkedHashSet<>();
+        paises.add("russia");
+        paises.add("albania");
+        paises.add("venezuela");
+        paises.add("iraque");
+        paises.add("brasil");
+        System.out.println(paises);
+
+
+        Set<String> paises2 = new TreeSet<>();
+        paises2.add("russia");
+        paises2.add("albania");
+        paises2.add("venezuela");
+        paises2.add("iraque");
+        paises2.add("brasil");
+        System.out.println(paises2);
     }
 
 }
