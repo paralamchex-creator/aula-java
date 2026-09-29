@@ -58,6 +58,16 @@ public class Aula04Collections {
         //  onde a ordem de exibição não importa. Tente adicionar um número repetido e mostre que ele não é duplicado.
         //  Cadastre pelo menos 5 números e imprima o conjunto final.
         // Exemplo Saída: "Números da rifa: [7, 15, 23, 42, 8]"
+        Set<String> cadastrarNumerosDaRifa = new HashSet<>();
+        cadastrarNumerosDaRifa.add("8");
+        cadastrarNumerosDaRifa.add("7");
+        cadastrarNumerosDaRifa.add("2");
+        cadastrarNumerosDaRifa.add("55");
+        cadastrarNumerosDaRifa.add("8");
+        cadastrarNumerosDaRifa.add("67");
+        cadastrarNumerosDaRifa.add("10");
+        cadastrarNumerosDaRifa.add("20");
+        System.out.println(cadastrarNumerosDaRifa);
     }
 
     private static void cadastrarNotasUnicasOrdenadas() {
@@ -65,6 +75,18 @@ public class Aula04Collections {
         //  garantindo que ao imprimir, os valores já apareçam ordenados do menor para o maior automaticamente.
         //  Cadastre pelo menos 5 notas, incluindo uma repetida, e imprima o resultado.
         // Exemplo Saída: "Notas únicas ordenadas: [5.0, 6.5, 7.0, 9.0, 10.0]"
+        Set<Double> cadastrarNotasUnicasOrdenadas = new TreeSet<>();
+        cadastrarNotasUnicasOrdenadas.add(9.0);
+        cadastrarNotasUnicasOrdenadas.add(4.5);
+        cadastrarNotasUnicasOrdenadas.add(4.0);
+        cadastrarNotasUnicasOrdenadas.add(2.0);
+        cadastrarNotasUnicasOrdenadas.add(0.0);
+        cadastrarNotasUnicasOrdenadas.add(8.75);
+        cadastrarNotasUnicasOrdenadas.add(10d);
+        cadastrarNotasUnicasOrdenadas.add(6.5);
+        cadastrarNotasUnicasOrdenadas.add(6.5);
+        System.out.println(cadastrarNotasUnicasOrdenadas);
+
     }
 
     private static void cadastrarEstoqueDeProdutos() {
@@ -72,6 +94,17 @@ public class Aula04Collections {
         //  onde a prioridade é a velocidade de busca pela chave, sem se preocupar com ordem de inserção ou ordenação.
         //  Cadastre pelo menos 4 produtos com suas quantidades e imprima cada par produto/quantidade.
         // Exemplo Saída: "Produto: notebook - Quantidade: 12"
+        Map<String, Integer> produto = new HashMap<>();
+        produto.put("abobora", 9);
+        produto.put("fraldinha", 5);
+        produto.put("pao", 8);
+        produto.put("farinha", 16);
+        produto.put("televisao", 2);
+        produto.put("microondas", 70);
+        produto.forEach((chave,valor)->
+                System.out.println(chave+"-" +valor)
+        );
+
     }
 
     private static void cadastrarContatosOrdenadosPorNome() {
