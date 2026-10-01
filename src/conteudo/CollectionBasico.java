@@ -75,6 +75,7 @@ public class CollectionBasico {
         paises.add("venezuela");
         paises.add("iraque");
         paises.add("brasil");
+        paises.add("iraque");
         System.out.println(paises);
 
 

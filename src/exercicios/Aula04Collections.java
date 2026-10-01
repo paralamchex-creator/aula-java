@@ -44,6 +44,16 @@ public class Aula04Collections {
         //  e nomes repetidos podem existir (ex: "João" pode chegar duas vezes).
         //  Cadastre pelo menos 4 nomes e imprima a fila na ordem de chegada.
         // Exemplo Saída: "Fila de atendimento: [João, Maria, João, Ana]"
+        List <String> cadastraratendimento = new LinkedList<>();
+        cadastraratendimento.add("joao");
+        cadastraratendimento.add("maria");
+        cadastraratendimento.add("joao");
+        cadastraratendimento.add("ana");
+        cadastraratendimento.add("caua");
+        cadastraratendimento.add("renato");
+        cadastraratendimento.add("caio");
+        System.out.println("fila de atendimento: " + cadastraratendimento);
+
     }
 
     private static void removerEmailsDuplicadosMantendoOrdem(List<String> emails) {
@@ -51,6 +61,12 @@ public class Aula04Collections {
         //  para remover os duplicados, mas mantendo a ordem original em que cada e-mail apareceu pela primeira vez.
         //  Pense: qual Collection remove duplicados automaticamente e ao mesmo tempo preserva a ordem de inserção?
         // Exemplo Saída: "E-mails únicos (ordem de cadastro): [ana@mail.com, bruno@mail.com, carlos@mail.com]"
+        Set <String> gmail = new LinkedHashSet<>();
+        for(int i=0;i< emails.size();i++){
+            gmail.add(emails.get(i));
+
+        }
+        System.out.println("emails cadastrados: " + gmail);
     }
 
     private static void cadastrarNumerosDaRifa() {
@@ -112,5 +128,14 @@ public class Aula04Collections {
         //  que precisa ser exibido sempre em ordem alfabética pelo nome (chave), mesmo sem controlar a ordem de inserção.
         //  Cadastre pelo menos 4 contatos e imprima o catálogo já ordenado por nome.
         // Exemplo Saída: "Contato: Ana - Telefone: 99999-0001"
+        Map <String, String> pessoas = new TreeMap<>();
+        pessoas.put("ana numero: ", "99999-9999");
+        pessoas.put("carlos numero: ", "88888-8888");
+        pessoas.put("caua numero: ", "77777-7777");
+        pessoas.put("lingard corinthians numero: ", "66666-6666");
+        pessoas.put("antonio numero: ", "55555-5555");
+        pessoas.forEach((chave,valor)->
+                System.out.println(chave+"-" +valor)
+        );
     }
 }
