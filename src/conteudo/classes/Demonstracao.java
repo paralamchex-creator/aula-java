@@ -6,5 +6,8 @@ public class Demonstracao {
         Carro carro1 = new Carro();
         carro1.ligar();
         carro1.desligar();
+        carro1.abir();
+        carro1.sentar();
+        carro1.acelerar();
     }
 }
