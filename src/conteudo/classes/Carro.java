@@ -1,50 +1,24 @@
 package conteudo.classes;
 
-public class Carro {
+public class Carro extends Veiculo {
 
-    private String cor;
-    private String porta;
+    private int qtdPorta;
     private String placa;
-    private String vidro;
-    private String banco;
 
-    // teste
-    private static Double combustivel = 25.5;
-
-    void ligar() {
-        System.out.println("carro ligado");
+    public Carro(int qtdPorta, String placa, String cor, int qtdAssentos) {
+        super(cor, qtdAssentos);
+        this.qtdPorta = qtdPorta;
+        this.placa = placa;
     }
 
-    void desligar() {
-        System.out.println("carro desligado");
-    }
-
-    void acelerar() {
-        combustivel = combustivel - 10;
-        System.out.println("o carro acelerou: combustivel: " + combustivel );
-    }
-
-    void vidro() {
-        System.out.println("voce olha a paisagem");
-    }
-
-    void cor() {
-        System.out.println("o carro é cinza");
-    }
-
-    void abir() {
-        System.out.println("a porta está aberta");
-    }
-
-    void fechar() {
-        System.out.println("a porta está fechada");
-    }
-
-    void sentar() {
-        System.out.println("voce sentou no banco");
-    }
-
-    void levantar() {
-        System.out.println("voce sentou no banco");
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "qtdPorta='" + qtdPorta + '\''+
+                ", placa='" + placa + '\'' +
+                ", cor='" + cor + '\'' +
+                ", qtdAssentos=" + qtdAssentos +
+                ", qtdCombustivel=" + qtdCombustivel +
+                '}';
     }
 }
