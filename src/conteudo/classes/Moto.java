@@ -1,26 +1,24 @@
 package conteudo.classes;
 
-public class Moto {
+public class Moto extends Veiculo {
 
-    String vidro;
-    String roda;
-    String gidao;
-    private static int aceleracao = 0;
+    private int qtdPorta;
+    private String placa;
 
-    void frear() {
-        aceleracao = aceleracao - 10;
+    public Moto(String cor, int qtdAssentos, int qtdPorta, String placa) {
+        super(cor, qtdAssentos);
+        this.qtdPorta = qtdPorta;
+        this.placa = placa;
     }
 
-    void ligarmotor() {
-        System.out.println("motor ligado");
-    }
-
-    void desligarmotor() {
-        System.out.println("motor desligado");
-    }
-
-    void acelerar() {
-        aceleracao = aceleracao + 10;
-        System.out.println("a moto acelerou. velocidade: " + aceleracao);
+    @Override
+    public String toString() {
+        return "Moto{" +
+                "qtdPorta='" + qtdPorta + '\'' +
+                ", placa='" + placa + '\'' +
+                ", cor='" + cor + '\'' +
+                ", qtdAssentos=" + qtdAssentos +
+                ", qtdCombustivel=" + qtdCombustivel +
+                '}';
     }
 }

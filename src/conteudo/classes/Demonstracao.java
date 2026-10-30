@@ -18,4 +18,6 @@ public class Demonstracao {
         }
         carro1.ligar();
     }
+        Moto moto1 = new Moto();
+    }
 }
