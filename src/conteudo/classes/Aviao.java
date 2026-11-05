@@ -1,27 +1,24 @@
 package conteudo.classes;
 
-public class Aviao {
+public class Aviao extends Veiculo{
 
-    String cabine;
-    String asa;
-    String roda;
-    String empenagem;
-    String cauda;
-    private static int velocidade= 0;
+    private int qtdPorta;
+    private String placa;
 
-    void entrar() {
-        System.out.println("voce entrou na cabine");
+    public Aviao(String cor, int qtdAssentos, int qtdPorta, String placa) {
+        super(cor, qtdAssentos);
+        this.qtdPorta = qtdPorta;
+        this.placa = placa;
     }
-    void ligar() {
-        System.out.println("motor ligado");
-    }
-    void desligar() {
-        System.out.println("motor desligado");
-    }
-    void voar() { velocidade = velocidade + 100;
-        System.out.println("iniciando decolagem. Velocidade: " + velocidade + "KmPH");
-    }
-    void pousar() {
-        System.out.println("iniciando pouso");
+
+    @Override
+    public String toString() {
+        return "Aviao{" +
+                "qtdPorta='" + qtdPorta + '\'' +
+                ", placa='" + placa + '\'' +
+                ", cor='" + cor + '\'' +
+                ", qtdAssentos=" + qtdAssentos +
+                ", qtdCombustivel=" + qtdCombustivel +
+                '}';
     }
 }

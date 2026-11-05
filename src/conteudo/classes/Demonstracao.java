@@ -3,7 +3,7 @@ package conteudo.classes;
 public class Demonstracao {
 
     public static void main(String[] args) {
-       Carro carro1 = new Carro(4, "123456789", "verde", 4);
+        Carro carro1 = new Carro(4, "123456789", "verde", 4);
         System.out.println(carro1);
         carro1.ligar();
 
@@ -13,10 +13,13 @@ public class Demonstracao {
         carro1.ligar();
 
         // acelerando
-        while(9d < carro1.verQtdCombustivel()) {
+        while (9d < carro1.verQtdCombustivel()) {
             carro1.acelerar();
         }
         carro1.ligar();
-    }
 
+        Moto moto1 = new Moto("verde", 2, 0, "12345678910");
+
+        Onibus onibus1 = new Onibus("azul", 16, 4, "12416279");
+    }
 }

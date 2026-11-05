@@ -1,32 +1,24 @@
 package conteudo.classes;
 
-public class Barco {
+public class Barco extends Veiculo {
 
-    String madeira;
-    String vela;
-    String ancora;
-    String mastro;
-    String retranca;
-    int acelerar = 0;
-    int combustivel = 200;
-    int velocidade = 0;
-    int limiteVelocidade = 80;
+    private int qtdPorta;
+    private String placa;
 
-    void acelerar() {
-        if (combustivel > 0) {
-            velocidade += 10;
-            combustivel -= 5;
-            System.out.println("O onibus esta a " + velocidade + "KmPH");
-            System.out.println(" combustivel restante: " + combustivel);
-        } else if (velocidade + 10 >= limiteVelocidade) {
-            System.out.println("limite atingido");
+    public Barco(String cor, int qtdAssentos, int qtdPorta, String placa) {
+        super(cor, qtdAssentos);
+        this.qtdPorta = qtdPorta;
+        this.placa = placa;
+    }
 
-        } else {
-            System.out.println(" sem combustivel");
-            ;
-        }
-        }
-        void capitao() {
-            System.out.println("o cappitao se chama caua");
-        }
+    @Override
+    public String toString() {
+        return "Barco{" +
+                "qtdPorta='" + qtdPorta + '\'' +
+                ", placa='" + placa + '\'' +
+                ", cor='" + cor + '\'' +
+                ", qtdAssentos=" + qtdAssentos +
+                ", qtdCombustivel=" + qtdCombustivel +
+                '}';
+    }
 }

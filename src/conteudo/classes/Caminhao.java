@@ -1,24 +1,24 @@
 package conteudo.classes;
 
-public class Caminhao {
+public class Caminhao extends Veiculo {
 
-    String roda;
-    String carga;
-    String cacamba;
-    String ima;
-    String vidro;
-    private static int carregar = 0;
-    private static int andar = 0;
+    private int qtdPorta;
+    private String placa;
 
-    void ligar() {
-        System.out.println("motor ligado");}
-    void cor() {
-        System.out.println("o caminhao é roxo");
+    public Caminhao(String cor, int qtdAssentos, int qtdPorta, String placa) {
+        super(cor, qtdAssentos);
+        this.qtdPorta = qtdPorta;
+        this.placa = placa;
     }
-    void capacidade() {System.out.println("o caminhao suporta 250kg");
+
+    @Override
+    public String toString() {
+        return "Caminhao{" +
+                "qtdPorta='" + qtdPorta + '\'' +
+                ", placa='" + placa + '\'' +
+                ", cor='" + cor + '\'' +
+                ", qtdAssentos=" + qtdAssentos +
+                ", qtdCombustivel=" + qtdCombustivel +
+                '}';
     }
-    void carregar() {carregar = carregar + 20;
-        System.out.println("o caminhao esta com: " + carregar + "kg");}
-    void andar() {andar = andar + 15;
-        System.out.println("o caminhao andou: " + andar + "km");}
 }

@@ -3,7 +3,7 @@ package conteudo.classes;
 public class Moto extends Veiculo {
 
     private int qtdPorta;
-    private String placa;
+    public String placa;
 
     public Moto(String cor, int qtdAssentos, int qtdPorta, String placa) {
         super(cor, qtdAssentos);
