@@ -1,5 +1,7 @@
 package desafio;
 
+import desafio.personagens.Jogador;
+
 import java.util.Scanner;
 
 public class Minecraft {
@@ -11,10 +13,8 @@ public class Minecraft {
         // TODO: leia o nome digitado usando o Scanner.
         String nome = scanner.nextLine();
 
+        Jogador jogador = new Jogador(nome);
         // TODO: crie variaveis inteiras para os materiais, comecando em zero.
-        int madeira = 0;
-        int pedra = 0;
-        int ferro = 0;
         int opcao = 0;
 
         // TODO: mostre uma mensagem de boas-vindas usando a variavel nome.
@@ -24,41 +24,34 @@ public class Minecraft {
         // Nas licoes de casa, preserve as opcoes existentes e acrescente dormir,
         // batalha, sorteio de inimigo e a opcao de sair no final do menu.
 
-        while (5 != opcao) {
+        while (6 != opcao) {
             System.out.println("===== MINECRAFT JAVA =====");
             System.out.println("1 - Minerar madeira");
             System.out.println("2 - Minerar pedra");
             System.out.println("3 - Minerar ferro");
             System.out.println("4 - Ver inventario");
-            System.out.println("5 - Sair");
+            System.out.println("5 - Fabricar espada");
+            System.out.println("6 - Sair");
             System.out.println("Escolha uma opcao:");
             opcao = scanner.nextInt();
 
             switch (opcao) {
                 case 1 :
-                    madeira += 3;
-                    System.out.println("vc minerou 3 madeiras" );
+                    jogador.minerarMadeira();
                     break;
                 case 2 :
-                    if (madeira < 3) {
-                        System.out.println("erro. colete 3 madeiras");
-                    }   else {
-                        pedra += 2;
-                        System.out.println("vc minerou 2 pedras");
-                    }
+                    jogador.minerarPedra();
                     break;
                 case 3 :
-                    if (pedra < 2) {
-                        System.out.println("erro. colete 2 pedras");
-                    }   else {
-                        ferro += 1;
-                        System.out.println("vc minerou 1 ferro");
-                    }
+                    jogador.minerarFerro();
                     break;
                 case 4 :
-                    System.out.println("inventario aberto: \n madeira = " + madeira + "\npedra: " + pedra + "\nferro: " + ferro);
+                    jogador.mostrarInventario();
                     break;
                 case 5 :
+                    jogador.fabricarEspada();
+                    break;
+                case 6 :
                     System.out.println("ate a proxima " + nome);
                     break;
 
@@ -70,6 +63,7 @@ public class Minecraft {
 
 
         }
+
 
           // pedra = 3 madeiras
         // ferro = 4 pedras
